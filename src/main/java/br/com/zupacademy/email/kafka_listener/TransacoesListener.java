@@ -22,11 +22,10 @@ public class TransacoesListener {
     @KafkaListener(topics = "${spring.kafka.topic.transactions}")
     @Transactional
     public void ouvir(TransacaoDTO transacaoDTO) {
-        System.out.println(transacaoDTO);
 
-        LOGGER.info("teste");
-        LOGGER.info(transacaoDTO.toString());
+        Email email = transacaoDTO.getEmail();
+        LOGGER.info(email.toString());
 
-        //Email email = transacaoDTO.getEmail();
+        emailRepository.save(email);
     }
 }

@@ -1,6 +1,7 @@
 package br.com.zupacademy.email.kafka_listener.dto;
 
 import br.com.zupacademy.email.kafka_listener.enums.TipoOperacao;
+import br.com.zupacademy.email.model.Email;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -49,7 +50,7 @@ public class TransacaoDTO {
         return celular;
     }
 
-    public void setCelular(CelularDTO celular) {
-        this.celular = celular;
+    public Email getEmail(){
+        return this.tipo.getEmail(this);
     }
 }

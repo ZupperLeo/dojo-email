@@ -48,9 +48,9 @@ public class Email {
 
     @Override
     public String toString() {
-        return "Email{" +
-                "Para: '" + recebedor + '\'' +
-                ", Assunto: '" + assunto + '\'' +
-                ", Mensagem: '" + mensagem + '}';
+        return "Email{" + "\r\n" +
+                "Para: " + recebedor + "\r\n" +
+                "Assunto: " + assunto + "\r\n" +
+                "Mensagem: " + mensagem + "}";
     }
 }
